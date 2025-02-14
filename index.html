@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#messages">Messages</a></li>
+                <li><a href="#countdown">Countdown</a></li>
+            </ul>
+        </nav>
+        <h1>Happy Valentine's Day, Nico Chan!</h1>
+        <img src="./assets/images/download.jpg" alt="A special moment" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+    </header>
+    
+    <section id="story">
+        <h2>Our Story</h2>
+        <p>Remember, how we were just kids when we first met. We have come so far and I am proud of the woman you have become, I am proud of us. A year ago if you asked me if I saw us where we are today I would've laughed. I am so proud of us.</p>
+    </section>
+    
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="./assets/images/flowers.jpeg" alt="Memory 1" />
+            <img src="./assets/images/image (1).jpg" alt="Memory 2" />
+            <img src="./assets/images/baby.jpeg" alt="Memory 3" />
+            <img src="./assets/images/hands.jpeg" alt="Memory 4" />
+            <img src="./assets/images/image (4).jpg" alt="Memory 5" />
+            <img src="./assets/images/us.jpeg" alt="Memory 6" />
+
+            
+        </div>
+    </section>
+    
+    <section id="messages">
+        <h2>Messages</h2>
+        <p>
+            <a href="./public/letter.html" target="_self" style="color: #e63946; text-decoration: underline; font-size: 1.6rem; text-align: center;">
+                Click here for a surpriseeee!
+            </a>
+        </p>
+    </section>
+    
+    <section id="countdown">
+        <h2>OOPS HOW MUCH TIME DO I HAVE LEFT?!</h2>
+        <div id="timer"></div>
+    </section>
+    
+    <footer>
+        <p class="salut">Love, Jeremy</p>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        const countdownDate = new Date("2025-02-15T00:00:00").getTime();
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("timer").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("timer").innerHTML = "Valentine's Day is Over 😭 BUT MY LOVE FOR YOU ISN'T";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Love Letter</title>
+    <link rel="stylesheet" href="./letter.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Love Letter</h1>
+        <pre id="letter-content"></pre>
+    </div>
+
+    <script>
+        // Fetch the content of letter.txt and display it
+        fetch('./')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('letter-content').textContent = data;
+            })
+            .catch(error => {
+                console.error('Error fetching the letter:', error);
+            });
+    </script>
+</body>
+</html>

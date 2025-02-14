@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 20px;
+    background-color: #c7afb080;
+    border-radius: 10px;
+}
+
+nav {
+    background-color: rgba(211, 94, 151, 0.8); /* Pink background for nav */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffccdd; /* Light pink on hover */
+}
+
+h1 {
+    color: #7a0101; /* Hot pink for the main title */
+    animation: fadeIn 2s;
+    font-size: 48px; /* Larger font size */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cute font */
+}
+
+h2 {
+    color: #e91a5fec; /* Light pink for section titles */
+    text-align: center;
+    margin-top: 20px;
+}
+
+section {
+    background-color: rgba(241, 237, 239, 0.8); /* White background with transparency */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    max-width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(61, 11, 11, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+footer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(150, 94, 135, 0.5);
+    color: #410219;
+    border-radius: 10px;
+}
+
+#timer {
+    font-size: 10cqmax;
+    color: #f30f0f; /* Hot pink for the timer */
+    text-align: center;
+    margin-top: 10px;
+    font-size:larger;
+}
+
+    
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
