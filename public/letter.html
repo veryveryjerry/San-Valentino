@@ -14,7 +14,7 @@
 
     <script>
         // Fetch the content of letter.txt and display it
-        fetch('./')
+        fetch('./letter.txt')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('letter-content').textContent = data;
