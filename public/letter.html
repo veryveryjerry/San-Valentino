@@ -14,13 +14,19 @@
 
     <script>
         // Fetch the content of letter.txt and display it
-        fetch('./letter.txt')
-            .then(response => response.text())
+        fetch('./letter.txt') // Ensure this points to your letter.txt file
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
             .then(data => {
                 document.getElementById('letter-content').textContent = data;
             })
             .catch(error => {
                 console.error('Error fetching the letter:', error);
+                document.getElementById('letter-content').textContent = "Error loading letter content.";
             });
     </script>
 </body>
